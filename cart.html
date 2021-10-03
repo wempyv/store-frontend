@@ -79,7 +79,8 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link d-inline-block mt-2">
-                <img src="/images/icon-cart-empty.svg" alt="" />
+                <img src="/images/icon-cart-filled.svg" alt="" />
+                <div class="card-badge">3</div>
               </a>
             </li>
           </ul>
@@ -98,7 +99,7 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="page-content page-details">
+    <div class="page-content page-cart">
       <section
         class="store-breadcrumbs"
         data-aos="fade-down"
@@ -112,144 +113,158 @@
                   <li class="breadcrumb-item">
                     <a href="/index.html">Home</a>
                   </li>
-                  <li class="breadcrumb-item active">Products Details</li>
+                  <li class="breadcrumb-item active">Cart</li>
                 </ol>
               </nav>
             </div>
           </div>
         </div>
       </section>
-      <section class="store-gallery" id="gallery">
+
+      <section class="store-cart">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-8" data-aos="zoom-in">
-              <transition name="slide-fade" mode="out-in">
-                <img
-                  :src="photos[activePhotos].url"
-                  :key="photos[activePhotos].id"
-                  class="w-100 main-image"
-                  alt=""
-                />
-              </transition>
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-12 table-responsive">
+              <table class="table table-borderless table-cart">
+                <thead>
+                  <tr>
+                    <td>Image</td>
+                    <td>Name &amp; Seller</td>
+                    <td>Price</td>
+                    <td>Menu</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="width: 20%">
+                      <img
+                        src="/images/product-cart-1.jpg"
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 35%">
+                      <div class="product-title">Sofa Ternyaman</div>
+                      <div class="product-subtitle">by Wempy Virgana</div>
+                    </td>
+                    <td style="width: 35%">
+                      <div class="product-title">$29,122</div>
+                      <div class="product-subtitle">USD</div>
+                    </td>
+                    <td style="width: 20%">
+                      <a href="#" class="btn btn-remove-cart">Remove</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 20%">
+                      <img
+                        src="/images/product-cart-2.jpg"
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 35%">
+                      <div class="product-title">Sneaker</div>
+                      <div class="product-subtitle">by Build With Angga</div>
+                    </td>
+                    <td style="width: 35%">
+                      <div class="product-title">$229,122</div>
+                      <div class="product-subtitle">USD</div>
+                    </td>
+                    <td style="width: 20%">
+                      <a href="#" class="btn btn-remove-cart">Remove</a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="width: 20%">
+                      <img
+                        src="/images/product-cart-3.jpg"
+                        class="cart-image"
+                      />
+                    </td>
+                    <td style="width: 35%">
+                      <div class="product-title">Coffee Holder</div>
+                      <div class="product-subtitle">by Wempy Virgana</div>
+                    </td>
+                    <td style="width: 35%">
+                      <div class="product-title">$12,122</div>
+                      <div class="product-subtitle">USD</div>
+                    </td>
+                    <td style="width: 20%">
+                      <a href="#" class="btn btn-remove-cart">Remove</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="col-lg-2">
-              <div class="row">
-                <div
-                  class="col-3 col-lg-12 mt-2 mt-lg-0"
-                  v-for="(photo, index) in photos"
-                  :key="photo.id"
-                  data-aos="zoom-in"
-                  data-aos-delay="100"
-                >
-                  <a href="#" @click="changeActive(index)">
-                    <img
-                      :src="photo.url"
-                      class="w-100 thumbnail-image"
-                      :class="{active:index == activePhotos}"
-                      alt=""
-                    />
-                  </a>
-                </div>
+          </div>
+
+          <div class="row" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-12">
+              <hr />
+            </div>
+            <div class="col-12">
+              <h2 class="mb-4">Shipping Details</h2>
+            </div>
+          </div>
+
+          <div class="row mb-2" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="addressOne">Address 1</label>
+                <input
+                  type="text"
+                  name=""
+                  class="form-control"
+                  id="addressOne"
+                  name="addressOne"
+                  value="Setra Duta Cemara"
+                />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="addressTwo">Address 2</label>
+                <input
+                  type="text"
+                  name=""
+                  class="form-control"
+                  id="addressTwo"
+                  name="addressTwo"
+                  value="Blok B2 No. 34"
+                />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="city">City</label>
+                <select name="city" id="city" class="form-control">
+                  <option value="Bandung">Bandung</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="Province">Province</label>
+                <select name="province" id="province" class="form-control">
+                  <option value="West Java">West Java</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="postalCode">Postal Code</label>
+                <input
+                  type="text"
+                  name=""
+                  class="form-control"
+                  id="postalCode"
+                  name="postalCode"
+                  value="40152"
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-
-      <div class="store-details-container" data-aos="fade-up">
-        <section class="store-heading">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8">
-                <h1>Sofa Ternyaman</h1>
-                <div class="owner">By Wempy Virgana</div>
-                <div class="price">$1,409</div>
-              </div>
-              <div class="col-lg-2" data-aos="zoom-in">
-                <a
-                  href="/cart.html"
-                  class="btn btn-success px-4 text-white btn-block mb-3"
-                >
-                  Add to Cart
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="store-description">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-lg-8">
-                <p>
-                  The Nike Air Max 720 SE goes bigger than ever before with
-                  Nike's tallest Air unit yet for unimaginable, all-day comfort.
-                  There's super breathable fabrics on the upper, while colours
-                  add a modern edge.
-                </p>
-                <p>
-                  Bring the past into the future with the Nike Air Max 2090, a
-                  bold look inspired by the DNA of the iconic Air Max 90.
-                  Brand-new Nike Air cushioning underfoot adds unparalleled
-                  comfort while transparent mesh and vibrantly coloured details
-                  on the upper are blended with timeless OG features for an
-                  edgy, modernised look.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="store-review">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-lg-8 mt-3 mb-3">
-                <h5>Customer Review (3)</h5>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12 col-lg-8">
-                <ul class="list-unstyled">
-                  <li class="media">
-                    <img
-                      src="/images/icons-testimonial-1.png"
-                      class="mr-3 rounded-circle"
-                    />
-                    <div class="media-body">
-                      <h5 class="mt-2 mb-1">Hazza Rizky</h5>
-                      I Thought it was not good for living room . I really happy
-                      to decided buy this product last week now feels like
-                      honey.
-                    </div>
-                  </li>
-                  <li class="media">
-                    <img
-                      src="/images/icons-testimonial-2.png"
-                      class="mr-3 rounded-circle"
-                    />
-                    <div class="media-body">
-                      <h5 class="mt-2 mb-1">Anna Surakita</h5>
-                      Color is great with the minimalist concept. Even I thought
-                      it was made by Cactus industry. I do really satisfied with
-                      this.
-                    </div>
-                  </li>
-                  <li class="media">
-                    <img
-                      src="/images/icons-testimonial-3.png"
-                      class="mr-3 rounded-circle"
-                    />
-                    <div class="media-body">
-                      <h5 class="mt-2 mb-1">Wanita kuat</h5>
-                      When I saw at first, it was really awesome to have with.
-                      Just let me know if there is another upcoming product like
-                      this.
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
     </div>
 
     <footer>
