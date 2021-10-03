@@ -196,7 +196,6 @@
               </table>
             </div>
           </div>
-
           <div class="row" data-aos="fade-up" data-aos-delay="150">
             <div class="col-12">
               <hr />
@@ -205,7 +204,6 @@
               <h2 class="mb-4">Shipping Details</h2>
             </div>
           </div>
-
           <div class="row mb-2" data-aos="fade-up" data-aos-delay="200">
             <div class="col-md-6">
               <div class="form-group">
@@ -289,6 +287,35 @@
               </div>
             </div>
           </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="150">
+            <div class="col-12">
+              <hr />
+            </div>
+            <div class="col-12">
+              <h2 class="mb-1">Payment Informations</h2>
+            </div>
+          </div>
+          <div class="row" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-4 col-md-2">
+              <div class="product-title">$10</div>
+              <div class="product-subtitle">Country Tax</div>
+            </div>
+            <div class="col-4 col-md-3">
+              <div class="product-title">$280</div>
+              <div class="product-subtitle">Product Insurance</div>
+            </div>
+            <div class="col-4 col-md-2">
+              <div class="product-title">$580</div>
+              <div class="product-subtitle">Ship to Jakarta</div>
+            </div>
+            <div class="col-4 col-md-2">
+              <div class="product-title text-success">$392,409</div>
+              <div class="product-subtitle">Total</div>
+            </div>
+            <div class="col-8 col-md-3">
+              <a href="/success.html" class="btn btn-success mt-4 px-4 btn-block">Checkout Now</a>
+            </div>
+          </div>
         </div>
       </section>
     </div>
@@ -304,57 +331,25 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="/vendor/vue/vue.js"></script>
-    <script>
-      var gallery = new Vue({
-        el: "#gallery",
-        mounted() {
-          AOS.init();
-        },
-        data: {
-          activePhotos: 0,
-          photos: [
-            {
-              id: 1,
-              url: "/images/product-details-1.jpg",
-            },
-            {
-              id: 2,
-              url: "/images/product-details-2.jpg",
-            },
-            {
-              id: 3,
-              url: "/images/product-details-3.jpg",
-            },
-            {
-              id: 4,
-              url: "/images/product-details-4.jpg",
-            },
-          ],
-        },
-        methods: {
-          changeActive(id) {
-            this.activePhotos = id;
-          },
-        },
-      });
-    </script>
-    <script src="/script/navbar-scroll.js"></script>
+   <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="/script/navbar-scroll.js"></script>
   </body>
 </html>
