@@ -100,21 +100,29 @@
             color: #9191a9;
         }
 
-        .nav-pills{
-            .nav-link{
+        .nav-pills {
+            .nav-link {
                 font-weight: normal;
                 font-size: 18px;
                 color: #9191a9;
                 border-radius: 0;
 
-
-                &.active{
+                &.active {
                     font-weight: 500;
                     font-size: 18px;
                     color: #0c0d36;
                     border-bottom: 2px solid #0c0d36;
                     background: none;
                 }
+            }
+        }
+
+        .gallery-container {
+            .delete-gallery {
+                display: block;
+                position: absolute;
+                top: -10px;
+                right: 0;
             }
         }
     }
